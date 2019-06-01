@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="search-container">
     <h1>Search</h1>
   </div>
 </template>
@@ -9,3 +9,8 @@ export default {
   name: 'Search'
 }
 </script>
+
+<style lang="sass" scoped>
+  .search-container
+    margin-top: 64px;
+</style>

@@ -1,4 +1,4 @@
-# scg-assignment
+# bangsue-restaurant-client
 
 ## Project setup
 ```

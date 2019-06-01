@@ -2,7 +2,7 @@
   <div id="app">
     <b-container fluid>
       <TopBar />
-      <router-view />
+      <router-view class="router-container" />
     </b-container>
   </div>
 </template>
@@ -20,5 +20,3 @@ export default {
 }
 </script>
 
-<style>
-</style>
