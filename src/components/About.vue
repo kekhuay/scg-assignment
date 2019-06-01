@@ -2,16 +2,24 @@
   <div class="about-container">
     <b-container>
       <b-jumbotron header="About Me" lead="This page is all about me" class="text-center"></b-jumbotron>
-      <div class="clearfix">
-        <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-right title="Natthaphon Phanit">
-          <b-card-sub-title class="mb-2">Senior Engineer at Ascend Corporation</b-card-sub-title>
-          <b-card-sub-title class="mb-2">Born 03 April 1989 ({{ age }} years old)</b-card-sub-title>
-          <b-card-text>
-            My name is Natthaphon Phanit. I am an experienced Software Engineer with a demonstrated history of working in the computer software industry since 2013.
-          </b-card-text>
-          <b-card-text>
-            I am strong engineering professional skilled in web application development with modern technology.
-          </b-card-text>
+
+      <div>
+        <b-card no-body class="overflow-hidden">
+          <b-row no-gutters>
+            <b-col md="2">
+              <b-card-img :src="myImage" class="rounded-0"></b-card-img>
+            </b-col>
+            <b-col md="10">
+              <b-card-body title="Natthaphon Phanit">
+              <b-card-sub-title class="mb-2">Senior Engineer at Ascend Corporation</b-card-sub-title>
+              <b-card-sub-title class="mb-2">Born 03 April 1989 ({{ age }} years old)</b-card-sub-title>
+                <b-card-text>
+                  My name is Natthaphon Phanit. I am an experienced Software Engineer with a demonstrated history of working in the computer software industry since 2013.
+                  I am strong engineering professional skilled in web application development with modern technology.
+                </b-card-text>
+              </b-card-body>
+            </b-col>
+          </b-row>
         </b-card>
       </div>
 
@@ -214,6 +222,9 @@ export default {
   computed: {
     age() {
       return this.$moment().diff(this.birthDate, 'years');
+    },
+    myImage() {
+      return require('../assets/images/my-image.jpeg');
     }
   }
 }
