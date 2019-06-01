@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '../components/Home';
-import About from '../components/About';
-import Search from '../components/Search';
 
 Vue.use(Router);
+
+const Home = () => import('../components/Home');
+const About = () => import('../components/About');
+const Search = () => import('../components/Search');
 
 const routes = [
   {
