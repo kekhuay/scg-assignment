@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, FETCHING_RESTAURANTS, FINISHED_FETCH_RESTAURANT, SET_PAGE_TOKEN, FETCH_MORE_RESTAURANTS } from './mutation-types';
+import { FETCH_RESTAURANTS, FETCHING_RESTAURANTS, FINISHED_FETCH_RESTAURANT, SET_PAGE_TOKEN, FETCH_MORE_RESTAURANTS, SET_RESPONSE_SEQUENCE } from './mutation-types';
 
 export default {
   [FETCH_RESTAURANTS](state, payload) {
@@ -15,5 +15,8 @@ export default {
   },
   [FETCH_MORE_RESTAURANTS](state, payload) {
     state.restaurants = [...state.restaurants, ...payload];
+  },
+  [SET_RESPONSE_SEQUENCE](state, payload) {
+    state.responseSequence = [...payload];
   }
 };

@@ -5,6 +5,7 @@ Vue.use(Router);
 
 const About = () => import('../components/About');
 const Search = () => import('../components/Search');
+const Sequence = () => import('../components/Sequence');
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     path: '/search',
     name: 'search',
     component: Search
+  },
+  {
+    path: '/sequence',
+    name: 'sequence',
+    component: Sequence
   }
 ];
 
