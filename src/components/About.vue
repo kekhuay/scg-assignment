@@ -9,7 +9,7 @@
             <b-col md="2">
               <b-card-img :src="myImage" class="rounded-0"></b-card-img>
             </b-col>
-            <b-col md="10">
+            <b-col md="10" class="about-section">
               <b-card-body title="Natthaphon Phanit">
               <b-card-sub-title class="mb-2">Senior Engineer at Ascend Corporation</b-card-sub-title>
               <b-card-sub-title class="mb-2">Born 03 April 1989 ({{ age }} years old)</b-card-sub-title>
@@ -32,9 +32,9 @@
             </b-button>
           </b-card-header>
           <b-collapse id="work-experience" accordion="my-accordion" role="tabpanel">
-            <b-card-body>
+            <b-card-body class="about-section">
               <b-list-group flush>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Ascend Corporation" title-tag="h5">
                     <b-card-sub-title class="mb-2">Senior Engineer</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Nov 2018 – Present</b-card-sub-title>
@@ -47,7 +47,7 @@
                     </b-card-text>
                   </b-card>
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Allianz Technology" title-tag="h5">
                     <b-card-sub-title class="mb-2">Java Developer</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Nov 2017 – Oct 2018</b-card-sub-title>
@@ -61,7 +61,7 @@
                     </b-card-text>
                   </b-card>
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Genius-Tree Co., Ltd." title-tag="h5">
                     <b-card-sub-title class="mb-2">Full Stack developer</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Sep 2015 – Aug 2017</b-card-sub-title>
@@ -75,7 +75,7 @@
                     </b-card-text>
                   </b-card>
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Inspektion Co., Ltd." title-tag="h5">
                     <b-card-sub-title class="mb-2">Python Developer</b-card-sub-title>
                     <b-card-sub-title class="mb-2">2013 – 2015</b-card-sub-title>
@@ -102,7 +102,7 @@
               Education
             </b-button>
           </b-card-header>
-          <b-collapse id="education" accordion="my-accordion" role="tabpanel">
+          <b-collapse id="education" accordion="my-accordion" role="tabpanel" class="about-section">
             <b-card-body title="Ramkhamhaeng University">
               <b-row>
                 <b-col>Degree</b-col>
@@ -130,15 +130,15 @@
             </b-button>
           </b-card-header>
           <b-collapse id="certificates" accordion="my-accordion" role="tabpanel">
-            <b-card-body>
+            <b-card-body class="about-section">
               <b-list-group flush>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Practical Data Analytics Using Rapid Miner" title-tag="h5">
                     <b-card-sub-title class="mb-2">Chulalongkorn University</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Issued Apr 2019 No Expiration Date</b-card-sub-title>
                   </b-card>
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Oracle Certified Expert, Java EE 6 Java Persistence API Developer" title-tag="h5">
                     <b-card-sub-title class="mb-2">Oracle</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Issued Jun 2017No Expiration Date</b-card-sub-title>
@@ -147,7 +147,7 @@
                     </b-card-sub-title>
                   </b-card>
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Oracle Certified Professional, Java SE 8 Programmer" title-tag="h5">
                     <b-card-sub-title class="mb-2">Oracle</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Issued Sep 2016 No Expiration Date</b-card-sub-title>
@@ -156,7 +156,7 @@
                     </b-card-sub-title>
                   </b-card>
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="about-section">
                   <b-card title="Oracle Certified Associate, Java SE 8 Programmer" title-tag="h5">
                     <b-card-sub-title class="mb-2">Oracle</b-card-sub-title>
                     <b-card-sub-title class="mb-2">Issued Feb 2016 No Expiration Date</b-card-sub-title>
@@ -180,25 +180,25 @@
             </b-button>
           </b-card-header>
           <b-collapse id="contact" accordion="my-accordion" role="tabpanel">
-            <b-card-body>
+            <b-card-body class="about-section">
               <b-list-group>
-                <b-list-group-item>
+                <b-list-group-item class="contact-item">
                   <font-awesome-icon icon="envelope" size="lg" />
                   nulladivides@protonmail.com
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="contact-item">
                   <font-awesome-icon icon="mobile-alt" size="lg" />
                   +66906783628
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="contact-item">
                   <font-awesome-icon :icon="['fab', 'linkedin']" size="lg" />
                   linkedin.com/in/natthaphon-p-b75020b8
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="contact-item">
                   <font-awesome-icon :icon="['fab', 'github']" size="lg" />
                   github.com/kekhuay
                 </b-list-group-item>
-                <b-list-group-item>
+                <b-list-group-item class="contact-item">
                   <font-awesome-icon :icon="['fab', 'stack-overflow']" size="lg" />
                   stackoverflow.com/users/3905564/kekhuay
                 </b-list-group-item>
@@ -214,14 +214,9 @@
 <script>
 export default {
   name: 'About',
-  data() {
-    return {
-      birthDate: '1989-04-03'
-    };
-  },
   computed: {
     age() {
-      return this.$moment().diff(this.birthDate, 'years');
+      return this.$moment().diff(this.$store.state.birthDate, 'years');
     },
     myImage() {
       return require('../assets/images/my-image.jpeg');
@@ -233,7 +228,13 @@ export default {
 <style lang="sass" scoped>
   .about-container
     margin-top: 64px;
+    margin-bottom: 64px;
   .about-card
     margin-top: 8px;
+  .about-section
+    background-color: aliceblue;
+  .contact-item
+    &:hover
+      background-color: antiquewhite;
 </style>
 

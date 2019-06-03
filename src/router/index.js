@@ -3,7 +3,6 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-const Home = () => import('../components/Home');
 const About = () => import('../components/About');
 const Search = () => import('../components/Search');
 
@@ -11,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Search
   },
   {
     path: '/about',
