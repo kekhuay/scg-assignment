@@ -17,6 +17,12 @@
 
       </b-list-group-item>
     </b-list-group>
+    <div class="more-section">
+      <b-button @click="moreRestaurants" variant="primary" :disabled="!finishedFetchRestaurants" v-if="hasNextPage">
+        <b-spinner small type="grow" v-if="!finishedFetchRestaurants"></b-spinner>
+        {{ finishedFetchRestaurants ? 'More' : 'Loading...' }}
+      </b-button>
+    </div>
   </div>
 </template>
 
@@ -29,11 +35,12 @@ export default {
     this.fetchRestaurants();
   },
   methods: {
-    ...mapActions(['fetchRestaurants'])
+    ...mapActions(['fetchRestaurants', 'moreRestaurants'])
   },
   computed: mapState({
     restaurants: state => state.restaurants,
-    finishedFetchRestaurants: state => state.finishedFetchRestaurants
+    finishedFetchRestaurants: state => state.finishedFetchRestaurants,
+    hasNextPage: state => state.pageToken
   })
 }
 </script>
@@ -46,4 +53,7 @@ export default {
     background-color: aliceblue;
     &:hover
       background-color: antiquewhite;
+  .more-section
+    margin-top: 8px;
+    text-align: center;
 </style>
