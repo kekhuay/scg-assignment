@@ -17,6 +17,7 @@ export default {
     state.restaurants = [...state.restaurants, ...payload];
   },
   [SET_RESPONSE_SEQUENCE](state, payload) {
-    state.responseSequence = [...payload];
+    state.responseSequence = [...payload.nextThreeSequence];
+    state.sequenceMsg = payload.msg;
   }
 };

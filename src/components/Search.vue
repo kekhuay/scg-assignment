@@ -1,6 +1,11 @@
 <template>
   <div class="search-container">
-    <b-jumbotron header="Restaurants" lead="Within Bangsue area" class="text-center"></b-jumbotron>
+    <b-input-group class="mt-3 search-box">
+      <b-form-input v-model="keyword"></b-form-input>
+      <b-input-group-append>
+        <b-button variant="info" @click="fetchRestaurants(keyword)">Search</b-button>
+      </b-input-group-append>
+    </b-input-group>
     <div class="text-center">
       <b-spinner variant="primary" label="Text Centered" style="width: 3rem; height: 3rem;" v-if="!finishedFetchRestaurants"></b-spinner>
     </div>
@@ -32,9 +37,6 @@ import { mapCacheActions } from 'vuex-cache';
 
 export default {
   name: 'Search',
-  beforeMount: function() {
-    this.fetchRestaurants();
-  },
   methods: {
     ...mapCacheActions(['fetchRestaurants', 'moreRestaurants'])
   },
@@ -42,7 +44,12 @@ export default {
     restaurants: state => state.restaurants,
     finishedFetchRestaurants: state => state.finishedFetchRestaurants,
     hasNextPage: state => state.pageToken
-  })
+  }),
+  data() {
+    return {
+      keyword: ''
+    };
+  }
 }
 </script>
 
@@ -57,4 +64,6 @@ export default {
   .more-section
     margin-top: 8px;
     text-align: center;
+  .search-box
+    margin-bottom: 8px;
 </style>

@@ -10,9 +10,10 @@ Vue.use(Vuex);
 const state = {
   restaurants: [],
   birthDate: '1989-04-03',
-  finishedFetchRestaurants: false,
+  finishedFetchRestaurants: true,
   pageToken: null,
-  responseSequence: []
+  responseSequence: [],
+  sequenceMsg: ''
 }
 
 export default new Vuex.Store({
