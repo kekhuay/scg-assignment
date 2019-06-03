@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import createCache from 'vuex-cache';
 import 'es6-promise/auto';
 import mutations from './mutations';
 import actions from './actions';
@@ -16,5 +17,6 @@ const state = {
 export default new Vuex.Store({
   state,
   mutations,
-  actions
+  actions,
+  plugins: [createCache()],
 });

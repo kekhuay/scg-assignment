@@ -27,7 +27,8 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapState } from 'vuex';
+import { mapCacheActions } from 'vuex-cache';
 
 export default {
   name: 'Search',
@@ -35,7 +36,7 @@ export default {
     this.fetchRestaurants();
   },
   methods: {
-    ...mapActions(['fetchRestaurants', 'moreRestaurants'])
+    ...mapCacheActions(['fetchRestaurants', 'moreRestaurants'])
   },
   computed: mapState({
     restaurants: state => state.restaurants,
