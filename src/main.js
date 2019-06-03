@@ -8,7 +8,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCertificate, faGraduationCap, faBriefcase, faAddressCard, faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome';
- 
+import store from './store';
+
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
@@ -22,4 +23,5 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
+  store,
 }).$mount('#app');
