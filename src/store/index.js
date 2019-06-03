@@ -11,7 +11,8 @@ const state = {
   restaurants: [],
   birthDate: '1989-04-03',
   finishedFetchRestaurants: false,
-  pageToken: null
+  pageToken: null,
+  responseSequence: []
 }
 
 export default new Vuex.Store({
