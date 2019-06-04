@@ -1,7 +1,7 @@
 <template>
   <div class="search-container">
     <b-input-group class="mt-3 search-box">
-      <b-form-input v-model="keyword"></b-form-input>
+      <b-form-input v-model="keyword" v-on:keyup.enter="fetchRestaurants(keyword)"></b-form-input>
       <b-input-group-append>
         <b-button variant="info" @click="fetchRestaurants(keyword)">Search</b-button>
       </b-input-group-append>
